@@ -1,5 +1,4 @@
 {
-  "homepage": "https://vedanttttt.github.io/Certificate-Verification-Website",
   "name": "application",
   "version": "0.1.0",
   "private": true,
@@ -18,9 +17,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
+    "start": "node backend/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
